@@ -5,14 +5,19 @@ import {
   Routes,
   Navigate,
 } from 'react-router-dom';
-import Home from '../Component/Home/Home';
+import AboutUs from '../../Component/AboutUs/AboutUs';
+import Header from '../../Component/Header/Header';
+import Home from '../../Component/Home/Home';
+import { SideNav } from '../../Component/SideNav/SideNav';
 export default function Main() {
   return (
     <div>
-      <h1>React Application</h1>
+      <Header />
+      <SideNav />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<AboutUs />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
     </div>
