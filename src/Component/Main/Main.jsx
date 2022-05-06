@@ -13,10 +13,13 @@ export default function Main() {
   return (
     <div>
       <Header />
-      <SideNav />
+
       <Router>
+        <SideNav />
         <Routes>
-          <Route path="/" element={<AboutUs />} />
+          <Route path="/" element={<Navigate replace to="/home" />} />
+          {/* <Route path="/" element={<AboutUs />} /> */}
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
