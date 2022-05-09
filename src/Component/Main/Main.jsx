@@ -11,6 +11,7 @@ import Header from '../../Component/Header/Header';
 import Home from '../../Component/Home/Home';
 import Login from '../../Component/Login/Login';
 import { SideNav } from '../../Component/SideNav/SideNav';
+import Title from '../../Component/Title/Title';
 export default function Main() {
   return (
     <div>
@@ -18,12 +19,13 @@ export default function Main() {
         <Routes>
           <Route path="/" element={<Navigate replace to="/login" />} />
           <Route path="/login" element={<Login />} />
+          {/* <Route path="/signup" element={<Signup />} /> */}
 
           <Route path="/my-app" element={<DefaultLayout />}>
             <Route path="about-us" element={<AboutUs />} />
             <Route path="home" element={<Home />} />
+            <Route path=":id" element={<Title />} />
           </Route>
-          
         </Routes>
       </Router>
     </div>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 export function SideNav() {
   const sideNavDetails = [
-    { id: 1, pathName: '/about-us', label: 'AboutUs' },
-    { id: 2, pathName: '/home', label: 'Home' },
+    { id: 1, pathName: '/my-app/about-us', label: 'AboutUs' },
+    { id: 2, pathName: '/my-app/home', label: 'Home' },
   ];
   return (
     <div className="side-nav">
@@ -14,9 +14,9 @@ export function SideNav() {
         <Link to="/home">Home</Link>
       </li> */}
 
-      {sideNavDetails.map((item) => {
+      {sideNavDetails.map((item, i) => {
         return (
-          <li>
+          <li key={i}>
             <Link to={item.pathName}>{item.label}</Link>
           </li>
         );
