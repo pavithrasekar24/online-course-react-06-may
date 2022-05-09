@@ -12,9 +12,8 @@ import { SideNav } from '../../Component/SideNav/SideNav';
 export default function Main() {
   return (
     <div>
-      <Header />
-
       <Router>
+        <Header />
         <SideNav />
         <Routes>
           <Route path="/" element={<Navigate replace to="/home" />} />
