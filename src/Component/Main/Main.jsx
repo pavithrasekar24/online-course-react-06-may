@@ -11,6 +11,7 @@ import Header from '../../Component/Header/Header';
 import Home from '../../Component/Home/Home';
 import Login from '../../Component/Login/Login';
 import { SideNav } from '../../Component/SideNav/SideNav';
+import Student from '../../Component/Student/Student';
 import Title from '../../Component/Title/Title';
 export default function Main() {
   return (
@@ -23,6 +24,7 @@ export default function Main() {
 
           <Route path="/my-app" element={<DefaultLayout />}>
             <Route path="about-us" element={<AboutUs />} />
+            <Route path="student" element={<Student />} />
             <Route path="home" element={<Home />} />
             <Route path=":id" element={<Title />} />
           </Route>

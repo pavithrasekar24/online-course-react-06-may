@@ -4,6 +4,7 @@ export function SideNav() {
   const sideNavDetails = [
     { id: 1, pathName: '/my-app/about-us', label: 'AboutUs' },
     { id: 2, pathName: '/my-app/home', label: 'Home' },
+    { id: 3, pathName: '/my-app/student', label: 'Student' },
   ];
   return (
     <div className="side-nav">
