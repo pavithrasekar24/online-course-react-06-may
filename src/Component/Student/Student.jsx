@@ -16,6 +16,7 @@ export default class Student extends React.Component {
     console.log(prevProps, prevState, this.state.studentName);
     if (prevState.studentName !== this.state.studentName) {
       console.log('student name is changing');
+      alert('hii');
     }
   }
   componentWillUnmount() {
