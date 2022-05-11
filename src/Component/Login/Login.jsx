@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 export default function Login() {
   const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+
   let navigate = useNavigate();
   let handleLogin = () => {
     //login code
@@ -18,6 +20,24 @@ export default function Login() {
       },
     });
   };
+  useEffect(() => {
+    console.log('mouting');
+  }, []);
+
+  useEffect(() => {
+    console.log('updating for username', userName);
+  }, [userName]);
+
+  useEffect(() => {
+    console.log('updating for password', password);
+  }, [password]);
+
+  useEffect(() => {
+    return () => {
+      console.log('unmouting');
+    };
+  }, []);
+
   return (
     <div>
       <h1>Login Page</h1>
